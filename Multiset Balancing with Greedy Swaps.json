@@ -1,0 +1,28 @@
+{
+  "pattern_name": "Multiset Balancing with Greedy Swaps",
+  "multiset_meaning": "A collection where order does not matter and duplicate elements are allowed. Only the frequency of each element matters.",
+  "when_to_use": [
+    "Arrays can be rearranged freely (internal swaps are free)",
+    "Goal is to make two arrays identical or balanced",
+    "Problem depends on element counts rather than positions"
+  ],
+  "core_ideas": [
+    "Treat arrays as multisets (ignore order)",
+    "Compute total frequency of each value",
+    "If any total frequency is odd → impossible",
+    "Find extra elements in each array",
+    "Each swap fixes two misplaced elements",
+    "Minimize cost using greedy pairing"
+  ],
+  "key_invariant": "Total extras in nums1 must equal total extras in nums2",
+  "recognition_trigger": [
+    "Two arrays",
+    "Free rearrangement",
+    "Costly swaps between arrays",
+    "Need equal element distribution"
+  ],
+  "complexity": {
+    "time": "O(n log n)",
+    "space": "O(n)"
+  }
+}
